@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.my-name {
+  color: #fff;
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
