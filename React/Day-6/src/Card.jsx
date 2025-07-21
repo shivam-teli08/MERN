@@ -1,5 +1,5 @@
 import React from 'react'
-import './Card.css'
+// import './Card.css'
 let data = [
   {
     "id": 1,
@@ -68,16 +68,16 @@ export function Card(props) {
   return (
     <>
       {filteredData.map((item) => (
-        <div className="Card" key={item.id}>
-          <div className='cardContent'>
+        <div className="Card w-90 p-10 border border-pink-300 rounded-2xl" key={item.id}>
+          <div className='cardContent flex flex-col items-center justify-center gap-4'>
             <img
               src={item.image}
               alt={item.name}
               style={{ width: "200px", height: "200px", objectFit: "cover" }}
             />
-            <h3>{item.name}</h3>
-            <p>Price: {item.price}</p>
-            <p>{item.description}</p>
+            <h3 className='text-pink-500 text-[23px] font-bold'>{item.name}</h3>
+            <p className='text-pink-400 text-[22px]'>Price: {item.price}</p>
+            <p className='text-gray-800'>{item.description}</p>
           </div>
         </div>
       ))}
