@@ -59,12 +59,15 @@ let data = [
   },
 ]
 
-export function Card() {
-
+export function Card(props) {
+  const searchTerm = props.SearchValue?.toLowerCase() || "";
+  const filteredData = data.filter(item =>
+    item.name.toLowerCase().includes(searchTerm) ||
+    item.description.toLowerCase().includes(searchTerm)
+  );
   return (
-
     <>
-      {data.map((item) => (
+      {filteredData.map((item) => (
         <div className="Card" key={item.id}>
           <div className='cardContent'>
             <img

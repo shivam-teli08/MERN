@@ -1,19 +1,21 @@
 import './App.css'
 import { Card } from './Card'
+import React, { useState } from 'react';
 function App() {
-  function getData() {
-  }
+  const [value, setValue] = useState('');
   return (
     <>
       <div className="Main">
         <h1>Uthalo Shopping Center</h1>
         <div className='SearchBox'>
-          <input type="search" placeholder='Search Here' />
-          <button onClick={getData()}>Search</button>
+          <input type="search" placeholder='Search Here' onInput={(e) => {
+            setValue(e.target.value);
+          }} />
+          {/* <button onClick={getData}>Search</button> */}
         </div>
       </div>
       <div className='CardContainer'>
-        <Card />
+        <Card SearchValue={value} />
       </div>
     </>
   )

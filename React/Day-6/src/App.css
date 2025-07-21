@@ -74,3 +74,14 @@ button{
   border-top-right-radius: 59px;
   overflow: auto;
 }
+@media (max-width: 768px) {
+  .Main {
+    height: 40vh;
+  }
+  input[type="search"] {
+    width: 80%;
+  }
+  button {
+    width: 80px;
+  }
+}
